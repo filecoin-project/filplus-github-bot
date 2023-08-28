@@ -1,7 +1,7 @@
 {
   "name": "@keyko-io/filecoin-verifier-common",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "An internal utility package for the Filecoin ecosystem. It provides shared constants and tools to ensure consistent development across our various Filecoin projects.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
