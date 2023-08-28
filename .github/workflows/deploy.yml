@@ -1,9 +1,9 @@
 name: Publish to NPM
 
 on:
-    push:
-      branches:
-        - ci-cd-process
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -21,7 +21,11 @@ jobs:
       # Install dependencies
       - run: yarn
 
+      # Set version using the tag name
+      - name: Set package version from tag
+        run: yarn version --new-version ${{ github.ref }}
+
       # Publish to NPM using Yarn
-      - run: yarn publish
+      - run: yarn publish --non-interactive
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
