@@ -1,6 +1,6 @@
 {
   "name": "@keyko-io/filecoin-verifier-common",
-  "version": "1.0.20",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

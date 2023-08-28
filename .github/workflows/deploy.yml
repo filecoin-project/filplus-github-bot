@@ -21,11 +21,7 @@ jobs:
       # Install dependencies
       - run: yarn
 
-      # Set version using the tag name
-      - name: Set package version from tag
-        run: yarn version --new-version ${{ github.ref_name }}
-
       # Publish to NPM using Yarn
-      - run: yarn publish --non-interactive
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
